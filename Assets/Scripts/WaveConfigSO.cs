@@ -8,6 +8,10 @@ public class WaveConfigSO : ScriptableObject
 {
     [SerializeField] public Transform pathPrefab;
     [SerializeField] public float moveSpeed = 5f;
+    [SerializeField] public float timeBetweenEnemySpawns = 1f;
+
+    [SerializeField] List<GameObject> enemyPrefabs;
+
 
     public Transform GetStartingWaypoint()
     {
@@ -17,5 +21,15 @@ public class WaveConfigSO : ScriptableObject
     public List<Transform> GetWaypoints()
     {
         return pathPrefab.Cast<Transform>().ToList();
+    }
+
+    public int GetEnemyCount()
+    {
+        return enemyPrefabs.Count;
+    }
+
+    public GameObject GetEnemyPrefab(int index)
+    {
+        return enemyPrefabs[index];
     }
 }

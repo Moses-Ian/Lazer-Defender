@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileLifetime = 5f;
-
-    public bool isFiring;
-    Coroutine firingCoroutine;
+    
+    [Header("AI")]
+    [SerializeField] bool useAI;
     [SerializeField] float firingDelay = 0.2f;
+    
+    [HideInInspector] public bool isFiring;
+    Coroutine firingCoroutine;
+
+    void Start()
+    {
+        if (useAI)
+        {
+            isFiring = true;
+        }
+    }
 
     void Update()
     {

@@ -32,5 +32,5 @@ public class AudioPlayer : MonoBehaviour
                 volume
             );
         }
-        }
     }
+}

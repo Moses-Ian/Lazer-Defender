@@ -15,12 +15,6 @@ public class Shooter : MonoBehaviour
     
     [HideInInspector] public bool isFiring;
     Coroutine firingCoroutine;
-    AudioPlayer audioPlayer;
-
-    void Awake()
-    {
-        audioPlayer = FindObjectOfType<AudioPlayer>();
-    }
 
     void Start()
     {
@@ -66,7 +60,7 @@ public class Shooter : MonoBehaviour
 
             Destroy(instance, projectileLifetime);
 
-            audioPlayer.PlayShootingClip();
+            AudioPlayer.instance.PlayShootingClip();
 
             yield return new WaitForSeconds(firingDelay);
         }

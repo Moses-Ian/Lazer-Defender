@@ -28,6 +28,6 @@ Bookmark my page to stay notified of upcoming games as I continue to learn about
 
 The assets and core ideas were given to me as part of the Complete C# Unity Game Developer 2D course on Udemy.
 
-Image assets are from kenney.nl.
+Image assets are from https://www.kenney.nl.
 
 Music is from Juhani Junkala (https://www.youtube.com/watch?v=dbACpSy9FWY).
